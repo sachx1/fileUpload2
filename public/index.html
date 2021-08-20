@@ -1,160 +1,20 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>File Upload Mock Up</title>
+<html lang="en">
+<head>
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width,initial-scale=1'>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/8.9.1/firebase-app.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/8.9.1/firebase-auth.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-database.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-firestore.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-functions.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-messaging.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-storage.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-analytics.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-remote-config.js"></script>
-    <script defer src="/__/firebase/8.9.1/firebase-performance.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-  </head>
-  <body style="background-color: black;">
+	<title>Apil Experiments</title>
 
-    <style>
-      .nav-container {
-          display: grid;
-          grid-template-columns: 3fr 1fr;
-          height: 50px;
-      }
-  
-      .nav-container img {
-          height: 35px;
-          width: auto;
-          border-radius: 50%;
-          margin-top: 5px;
-          border: 5px solid transparent;
-          transition: all;
-          transition-duration: 75ms;
-      }
-  
-      .nav-container img:hover {
-          border: 5px solid #0ec2a7;
-      }
-  
-      .nav-links {
-          display: grid;
-          grid-template-columns: repeat(10, 1fr);
-          gap: 0.5fr;
-          justify-items: center;
-          align-items: center;
-          grid-gap: 10px;
-      }
-  
-      .nav-links a {
-        /* float: left; */
-        font-family: monospace;
-        color: #f2f2f2;
-        text-align: center;
-        /* padding: 14px 16px; */
-        text-decoration: none;
-        font-size: 17px;
-      }
-  
-      .nav-links a:hover {
-          border-bottom: solid 10px #0ec2a7;
-      }
-  
-      .nav-profile {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          justify-self: end;
-          justify-items: center;
-          align-items: center;        
-      }
-  
-      .login-button-container {
-          grid-column-start: 2;
-      }
+	<link rel='icon' type='image/png' href='/favicon-32x32.png'>
+	<link rel='stylesheet' href='/global.css'>
+	<link rel='stylesheet' href='/build/bundle.css'>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&family=Oswald:wght@700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+	<script defer src='/build/bundle.js'></script>
+</head>
 
-      .rcorners2{
-        border-radius: 25px;
-        border: 2px solid #0ec2a7;
-        margin: auto;
-        padding: 20px;
-        width: 500px;
-        height: 300px;
-      }
-
-      .center{
-        text-align: center;
-        color: white;
-        font-family: monospace;
-      }
-
-      button{
-        background-color: #0ec2a7; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-
-      }
-
-
-  </style>
-
-    <!-- <div class="topnav">
-      <a class="active" href="https://apil-experiments.web.app/">Experiments</a>
-      <a href="https://github.com/tgh-apil">Github</a>
-      <a href="https://apil.ca/">apil.ca</a>
-      <a href="https://fileupload-9611b.web.app/">File Upload</a>
-    </div> -->
-
-    <nav class="nav-container">
-      <div class="nav-links">
-          <a href='https://apil-experiments.web.app/'>Experiments</a>
-          <a href='https://github.com/tgh-apil'>Github</a>
-          <a href='https://apil.ca/'>apil.ca</a>
-          <a href='https://fileupload-9611b.web.app/'>File Upload</a>
-          <a onclick="googleLogin()">Login With Google</a>
-      </div>
-  </nav>
-
-    <script src = "app.js">
-
-    function importData(){
-        let input = document.createElement('input');
-        input.type = 'file';
-        input.onchange = _ => {
-            let files = Array.from(input.files);
-            console.log(files);
-        };
-        input.click();
-    }
-    </script>
-
-
-
-    <div class="center">
-      <h2>Upload a File</h2>
-      <h2>WORKING FIREBASE PROJECT!!!!</h2>
-    </div>
-
-    <div class="rcorners2">
-      <div class="center">
-        <h3>Drag or simply click to upload a file</h3>
-        <button onclick="importData()">Upload Files</button>
-      </div>
-    </div>
-
-    
-  </body>
+<body>
+</body>
 </html>
