@@ -1,11 +1,27 @@
 <script>
-
-    import Navbar from "./Navbar.components.svelte";
-    import FileUploadButton from "./FileUploadButton.components.svelte";
-import Home from "./views/Home.view.svelte";
+    import { hasPopup } from './stores';
+    import Router from 'svelte-spa-router';
+    // components
+    import Navbar from './components/Navbar.component.svelte';
+    // views
+    import Profile from './views/Profile.view.svelte';
+    import Experiments from './views/Experiments.view.svelte';
+    import ModelViewer from './views/ModelViewer.views.svelte';
+    import ModelViewerEperiment from './views/ModelViewerExperiment.view.svelte';
+    import NotFound from './views/NotFound.view.svelte';
+import FileUpload from './views/FileUpload.svelte';
+    
+    hasPopup.update(src => src = false);
 </script>
 
 <!-- svelte-ignore missing-declaration -->
 <Router routes={
-    {'/#/': Home}
+    {
+        '/': Experiments,
+        '/profile': Profile,
+        '/3dviewer': ModelViewerEperiment,
+        '/3dviewer/viewer': ModelViewer,
+        '/file': FileUpload,
+        '*': NotFound
+    }
 } />
